@@ -21,10 +21,25 @@ python3.8 get-pip.py
 ```
 Install some package via pip3.X
 ```bash
-pip3.X install package_name
+/path/to/prefix/python3.X/bin/pip3.X install package_name
 ```
 To get the location of 'package_name'
+```bash
+/path/to/prefix/python3.X/bin/pip3.X show package_name
+```
+You will see the location of the package under 'location' category
+
 ```bash
 cd ~/path/to/prefix/python3.X/lib/python3.X/site-packages
 ```
 /path/to/prefix ----> Custom location of python3.X installed.
+
+## Location of packages installed via yum on CentOS
+```bash
+rpm -ql package_name
+```
+then export the directory....
+```bash
+export package_DIR=/path/to/prefix
+```
+/path/to/prefix is the path of the package
